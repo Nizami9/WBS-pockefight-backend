@@ -13,8 +13,8 @@ app.get('/pokemon', (req, res)=>{
 
 app.get('/pokemon/:id', (req, res)=>{
     const {id} = req.params;
-    const findUser = jsonData.find(eachUser => eachUser.id === parseInt(id))
-    return res.send(findUser)
+    const findPokemon = jsonData.find(pokemon => pokemon.id === parseInt(id))
+    return res.send(findPokemon)
 })
 app.listen(port, ()=>{
     console.log('works')
